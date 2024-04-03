@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26596496-1bee-42ec-b991-edfeda554c8d" name="Changes" comment="The start of the project!&#10;The way it works currently:&#10;* the console asks for a path&#10;* user enters path&#10;* application searches the folder and all sub folders for .srt files&#10;* ALL the .srt files it find it will translate automatically to hebrew&#10;* Creates new .srt file">
-      <change afterPath="$PROJECT_DIR$/Database/Main_DB.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Translator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+    <list default="true" id="26596496-1bee-42ec-b991-edfeda554c8d" name="Changes" comment="Added a database that remembers:&#10;* What is the main directory to use&#10;* How many letters did I translate this month&#10;Adjusted all the classes based on this major change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Translate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Translator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Translator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utility.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +25,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Utility.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -125,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711566479478</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added a database that remembers:&#10;* What is the main directory to use&#10;* How many letters did I translate this month&#10;Adjusted all the classes based on this major change">
+      <option name="closed" value="true" />
+      <created>1712154471768</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712154471768</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,6 +153,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="The start of the project!&#10;The way it works currently:&#10;* the console asks for a path&#10;* user enters path&#10;* application searches the folder and all sub folders for .srt files&#10;* ALL the .srt files it find it will translate automatically to hebrew&#10;* Creates new .srt file" />
-    <option name="LAST_COMMIT_MESSAGE" value="The start of the project!&#10;The way it works currently:&#10;* the console asks for a path&#10;* user enters path&#10;* application searches the folder and all sub folders for .srt files&#10;* ALL the .srt files it find it will translate automatically to hebrew&#10;* Creates new .srt file" />
+    <MESSAGE value="Added a database that remembers:&#10;* What is the main directory to use&#10;* How many letters did I translate this month&#10;Adjusted all the classes based on this major change" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a database that remembers:&#10;* What is the main directory to use&#10;* How many letters did I translate this month&#10;Adjusted all the classes based on this major change" />
   </component>
 </project>
