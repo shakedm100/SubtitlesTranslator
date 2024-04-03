@@ -2,18 +2,10 @@ import os
 import glob
 import re
 
-import Translate
+import Database.Main_DB
+import Translator
 
-# Global variable
-MAIN_FOLDER_PATH = None
-
-def set_main_folder_path(path):
-    # Declares we want to use the global folder path, need to be used every time you write to the variable
-    global MAIN_FOLDER_PATH
-
-    MAIN_FOLDER_PATH = path
-
-def folder_path():
+def subtitles_folder_paths():
     """
         The following method finds all the .srt files in the set directory and all it's sub directories.
     :return: a list of all the subdirectories which contains the .srt files
@@ -21,7 +13,7 @@ def folder_path():
     subtitle_files = [] # Contains all the subtitles found
 
     # O(n^2) complexity to look at all the paths in the main folder
-    for dirpath, _, _ in os.walk(MAIN_FOLDER_PATH):
+    for dirpath, _, _ in os.walk(Database.Main_DB.get_main_directory()):
         # Search for .srt files in the current directory
         for file in glob.glob(os.path.join(dirpath, '*.srt')):
             subtitle_files.append(file)
@@ -29,7 +21,8 @@ def folder_path():
     return subtitle_files
 
 
-def process_srt_file(file_paths):
+def process_srt_file():
+    file_paths = subtitles_folder_paths()
     """
     This method receives a list of file paths and translates chooses which line
     goes to translation and which line isn't.
@@ -56,7 +49,7 @@ def process_srt_file(file_paths):
                 elif line.isdigit() or line == '':
                     translated_lines.append(line)
                 else:
-                    translated_text = Translate.translate_line(line, 'he')
+                    translated_text = Translator.translate_line(line)
                     translated_lines.append(translated_text)
 
         # Extract the base name and the extension of the original file
@@ -73,4 +66,3 @@ def process_srt_file(file_paths):
         with open(new_file_path, 'w', encoding='utf-8') as new_file:
             for translated_line in translated_lines:
                 new_file.write(f"{translated_line}\n")
-
