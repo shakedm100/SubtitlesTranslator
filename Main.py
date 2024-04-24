@@ -1,7 +1,7 @@
 import Database.Main_DB
 import Utility
 import config
-
+import os
 # Note: the chosen language code is called: IETF language tag or BCP-47
 
 # TODO:
@@ -16,8 +16,12 @@ import config
 def main():
     Database.Main_DB.initialize_db()
     if Database.Main_DB.get_main_directory() is None:
-        dir = input("Set a main directory to search subtitles!")
-        Database.Main_DB.set_main_directory(dir)
+        # Default pathing point
+        defaultDirectory = '/container/path'
+        # The user inputted Mount_Path for the application
+        directory = os.getenv('MOUNT_PATH', defaultDirectory)
+        Database.Main_DB.set_main_directory(directory)
+    print("The location of the directory is: "+ Database.Main_DB.get_main_directory())
     config.target_language = input("Choose language")
     Utility.process_srt_file()
 
