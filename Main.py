@@ -11,10 +11,9 @@ import logging
  * Add if else condition that dictate to which language to translate to, for example if the subtitles are in english
  translate to hebrew, if in japanese translate to english etc..
  * Add watchdog to observe changes in the subtitles directory
- * Need to decide how to deploy it, I want a UI, even a basic one. So, maybe a container that has a UI? Or just a simple program UI.
+ * Add a UI, even a basic one. So, maybe a container that has a UI? Or just a simple program UI.
  I don't want it in Terminal (Bash). It limits options to what a user can choose.
- * Fix a bug where MainDB is being created where ever the user is in the terminal
- * Fix Cron timing, it doesn't seem to work
+ * Add a PGS/ASS to .srt file
 """
 
 # Configure logging for docker

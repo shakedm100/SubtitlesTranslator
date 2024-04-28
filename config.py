@@ -1,5 +1,5 @@
 
 target_language = 'en'
-directory = r'Database\maindatabase.db'
+directory = r'/app/Database/maindatabase.db'
 
 
