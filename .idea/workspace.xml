@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26596496-1bee-42ec-b991-edfeda554c8d" name="Changes" comment="Progressing towards a containerized working version">
+    <list default="true" id="26596496-1bee-42ec-b991-edfeda554c8d" name="Changes" comment="First working docker version to deploy">
+      <change afterPath="$PROJECT_DIR$/Watcher.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/Main_DB.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/Main_DB.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utility.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="developer" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,7 +53,8 @@
     "Python.Translate.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "developer",
+    "git-widget-placeholder": "master-docker",
+    "last_opened_file_path": "C:/Users/Shaked/Downloads/SubtitlesTranslator-master/SubtitlesTranslator-master",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
@@ -156,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713962953300</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="First working docker version to deploy">
+      <option name="closed" value="true" />
+      <created>1714299037450</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714299037450</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -175,6 +184,7 @@
     <MESSAGE value="Added a database that remembers:&#10;* What is the main directory to use&#10;* How many letters did I translate this month&#10;Adjusted all the classes based on this major change" />
     <MESSAGE value="* Added a 'stamp' to know if an SRT file has been translated to a given language" />
     <MESSAGE value="Progressing towards a containerized working version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Progressing towards a containerized working version" />
+    <MESSAGE value="First working docker version to deploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="First working docker version to deploy" />
   </component>
 </project>

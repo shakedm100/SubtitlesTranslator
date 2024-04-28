@@ -4,6 +4,8 @@ import config
 import os
 import logging
 
+from Watcher import Watcher
+
 # Note: the chosen language code is called: IETF language tag or BCP-47
 
 # TODO:
@@ -78,20 +80,30 @@ def find_dynamic_mount_points():
 # Uncomment below to run the function and find dynamic mount points
 # print(find_dynamic_mount_points())
 
+def activate_watchdog(directories):
+    watcher = Watcher(directories)
+    watcher.run()
 
 def main():
     logging.info("Starting main")
+    # Find all the non OS mounted paths in the container
     dynamic_mount_points = find_dynamic_mount_points()
     Database.Main_DB.initialize_db()
     if len(Database.Main_DB.get_directories()) != len(dynamic_mount_points):
-        # Default pathing point
         # C:\Users\Shaked\PycharmProjects\SubtitlesTranslator\subtitlesTest
         # The user inputted Mount_Path for the application
         Database.Main_DB.set_directories(dynamic_mount_points)
     logging.info("The location of the directory is: " + str(Database.Main_DB.get_directories()))
 
-    config.target_language = os.getenv('TARGET_LANGUAGE', 'iw')
+    config.target_language = os.getenv('TARGET_LANGUAGE', 'en')
     logging.info("Chosen language to translate to: " + config.target_language)
+
+    # An option to disable watchdog default is true
+    #config.use_watchdog = os.getenv('WATCH_DOG', True)
+
+    #if config.use_watchdog == True:
+    #    activate_watchdog(dynamic_mount_points)
+
     search_content()
 
 
