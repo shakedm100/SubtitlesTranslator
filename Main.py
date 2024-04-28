@@ -79,7 +79,6 @@ def find_dynamic_mount_points():
 
 def main():
     logging.info("Starting main")
-    app.run(host='0.0.0.0', port=5000, debug=True)
 
     # Find all the non OS mounted paths in the container
     dynamic_mount_points = find_dynamic_mount_points()
@@ -91,8 +90,9 @@ def main():
     config.target_language = os.getenv('TARGET_LANGUAGE', 'iw')
 
     search_content()
+    app.run(host='0.0.0.0', port=5000, debug=True)
 
 
 if __name__ == main():
     main()
-    #app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)

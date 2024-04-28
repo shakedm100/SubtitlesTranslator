@@ -1,4 +1,5 @@
 from flask import render_template, request, redirect, url_for
+import Utility
 
 def init_routes(app):
     @app.route('/')
@@ -7,7 +8,5 @@ def init_routes(app):
 
     @app.route('/translate', methods=['POST'])
     def translate():
-        # Here you would integrate your translation logic
-        language = request.form['language']
-        # Call to your translation function
+        Utility.process_srt_file()
         return redirect(url_for('index'))
