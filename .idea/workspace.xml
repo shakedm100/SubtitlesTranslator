@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26596496-1bee-42ec-b991-edfeda554c8d" name="Changes" comment="* Added a 'stamp' to know if an SRT file has been translated to a given language">
+    <list default="true" id="26596496-1bee-42ec-b991-edfeda554c8d" name="Changes" comment="Progressing towards a containerized working version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/Main_DB.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/Main_DB.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utility.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,16 +47,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Main.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.Translate.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;developer&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Main.executor": "Run",
+    "Python.Translate.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "developer",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Python.Main">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SubtitlesTranslator" />
@@ -147,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712162346272</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Progressing towards a containerized working version">
+      <option name="closed" value="true" />
+      <created>1713962953300</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713962953300</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,6 +174,7 @@
     <MESSAGE value="The start of the project!&#10;The way it works currently:&#10;* the console asks for a path&#10;* user enters path&#10;* application searches the folder and all sub folders for .srt files&#10;* ALL the .srt files it find it will translate automatically to hebrew&#10;* Creates new .srt file" />
     <MESSAGE value="Added a database that remembers:&#10;* What is the main directory to use&#10;* How many letters did I translate this month&#10;Adjusted all the classes based on this major change" />
     <MESSAGE value="* Added a 'stamp' to know if an SRT file has been translated to a given language" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Added a 'stamp' to know if an SRT file has been translated to a given language" />
+    <MESSAGE value="Progressing towards a containerized working version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Progressing towards a containerized working version" />
   </component>
 </project>

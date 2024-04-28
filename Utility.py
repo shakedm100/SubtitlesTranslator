@@ -4,6 +4,7 @@ import re
 import Database.Main_DB
 import Translator
 import config
+import logging
 
 
 def subtitles_folder_paths():
@@ -11,14 +12,22 @@ def subtitles_folder_paths():
     The following method finds all the .srt files in the set directory and all it's sub directories.
     :return: a list of all the subdirectories which contains the .srt files
     """
+
+    logging.info("Searching for sub folder paths")
     subtitle_files = []  # Contains all the subtitles found
-
-    # O(n^2) complexity to look at all the paths in the main folder
-    for dirpath, _, _ in os.walk(Database.Main_DB.get_main_directory()):
-        # Search for .srt files in the current directory
-        for file in glob.glob(os.path.join(dirpath, '*.srt')):
-            subtitle_files.append(file)
-
+    directory_list = Database.Main_DB.get_directories()
+    logging.info("Directory list = "+str(directory_list)+ "the type is: "+str(type(directory_list)))
+    try:
+        for directory in directory_list:
+            logging.info("currently searching directory = "+str(directory))
+            # O(n^2) complexity to look at all the paths in the main folder
+            for dirpath, _, _ in os.walk(directory):
+                #logging.info("Walking")
+                # Search for .srt files in the current directory
+                for file in glob.glob(os.path.join(dirpath, '*.srt')):
+                    subtitle_files.append(file)
+    except:
+        logging.info("ERROR: Failed to search directories")
     return subtitle_files
 
 
@@ -29,6 +38,8 @@ def process_srt_file():
     if the line is a timing line or an empty line it doesn't translate it, otherwise it does
     :return: Void
     """
+
+    logging.info("Processing srt files")
 
     file_paths = subtitles_folder_paths()
     for file_path in file_paths:
@@ -49,6 +60,8 @@ def process_srt_file():
                      for example: 00:12:34,253 00 represents the first \d{2} and so on and 253 is \d{3}
                     """
                     if re.match(r'\d{2}:\d{2}:\d{2},\d{3} --> \d{2}:\d{2}:\d{2},\d{3}', line):
+                        translated_lines.append(line)
+                    elif line.startswith("# Translated-To-Language:"):
                         translated_lines.append(line)
                     elif line.isdigit() or line == '':
                         translated_lines.append(line)
