@@ -12,5 +12,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN echo -e "*/1 * * * * cd /app && python Main.py >> /var/log/cron.log 2>&1\n" > /etc/crontabs/root
 RUN touch /var/log/cron.log
 
+# Exposing port 5000 to run the WebUI
+EXPOSE 5000
+
 # Start the cron daemon in the foreground
 CMD ["crond", "-f", "-d", "8", "-L", "/dev/stdout"]

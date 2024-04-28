@@ -3,6 +3,7 @@ import Utility
 import config
 import os
 import logging
+from app import create_app
 
 # Note: the chosen language code is called: IETF language tag or BCP-47
 
@@ -18,6 +19,8 @@ import logging
 
 # Configure logging for docker
 logging.basicConfig(filename='/var/log/app.log', level=logging.INFO, format='%(asctime)s:%(levelname)s:%(message)s', force=True)
+
+app = create_app()
 
 
 def search_content():
@@ -76,6 +79,7 @@ def find_dynamic_mount_points():
 
 def main():
     logging.info("Starting main")
+    app.run(host='0.0.0.0', port=5000, debug=True)
 
     # Find all the non OS mounted paths in the container
     dynamic_mount_points = find_dynamic_mount_points()
@@ -91,3 +95,4 @@ def main():
 
 if __name__ == main():
     main()
+    #app.run(debug=True)
