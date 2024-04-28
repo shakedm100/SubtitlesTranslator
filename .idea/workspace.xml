@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26596496-1bee-42ec-b991-edfeda554c8d" name="Changes" comment="First working docker version to deploy">
-      <change afterPath="$PROJECT_DIR$/Watcher.py" afterDir="false" />
+    <list default="true" id="26596496-1bee-42ec-b991-edfeda554c8d" name="Changes" comment="First working docker version to deploy - added dogwatch but still WIP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Watcher.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +50,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python.Main.executor": "Run",
+    "Python.Main.executor": "Debug",
     "Python.Translate.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -165,7 +166,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714299037450</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="First working docker version to deploy - added dogwatch but still WIP">
+      <option name="closed" value="true" />
+      <created>1714309693646</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714309693646</updated>
+    </task>
+    <task id="LOCAL-00007" summary="First working docker version to deploy - added dogwatch but still WIP">
+      <option name="closed" value="true" />
+      <created>1714309768219</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714309768219</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -185,6 +202,7 @@
     <MESSAGE value="* Added a 'stamp' to know if an SRT file has been translated to a given language" />
     <MESSAGE value="Progressing towards a containerized working version" />
     <MESSAGE value="First working docker version to deploy" />
-    <option name="LAST_COMMIT_MESSAGE" value="First working docker version to deploy" />
+    <MESSAGE value="First working docker version to deploy - added dogwatch but still WIP" />
+    <option name="LAST_COMMIT_MESSAGE" value="First working docker version to deploy - added dogwatch but still WIP" />
   </component>
 </project>
