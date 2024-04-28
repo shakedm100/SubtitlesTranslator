@@ -1,0 +1,11 @@
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12 OR Jan, Feb, Mar, ...)
+# |  |  |  |  .---- day of week (0 - 7) (Sunday=0 or 7)
+# |  |  |  |  |
+# *  *  *  *  *   command to be executed
+* * * * * python /app/Main.py >> /var/log/cron.log 2>&1
+* * * * * /bin/echo "Cron is running at $(date)" >> /var/log/cron.log 2>&1
+# Ensure a newline at the end
