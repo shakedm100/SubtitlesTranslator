@@ -22,7 +22,6 @@ def subtitles_folder_paths():
             logging.info("currently searching directory = "+str(directory))
             # O(n^2) complexity to look at all the paths in the main folder
             for dirpath, _, _ in os.walk(directory):
-                #logging.info("Walking")
                 # Search for .srt files in the current directory
                 for file in glob.glob(os.path.join(dirpath, '*.srt')):
                     subtitle_files.append(file)
@@ -88,6 +87,8 @@ def process_srt_file():
                 create_new_srt(new_file_path, translated_lines)
 
         add_translation_stamp(file_path)
+
+    logging.info("Monthly letter count: "+str(Database.Main_DB.get_latest_letter_count()))
 
 
 def create_new_srt(new_file_path, translated_lines):

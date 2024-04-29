@@ -1,14 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Subtitle Translator</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subtitle Translator</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <h1>Welcome to the Subtitle Translator!</h1>
-    <form action="{{ url_for('translate') }}" method="post">
-        <label for="language">Target Language:</label>
-        <input type="text" id="language" name="language">
-        <button type="submit">Translate</button>
-    </form>
+<div class="container">
+    <h1>Subtitle Translator</h1>
+	Press the translate button to initiate a translation
+    <button id="translateButton">Translate</button>
+</div>
+<script>
+    document.getElementById("translateButton").addEventListener("click", function() {
+        const data = { subtitles: document.getElementById("subtitles").value };
+        fetch('/translate', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    });
+</script>
 </body>
 </html>
